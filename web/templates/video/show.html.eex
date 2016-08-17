@@ -4,7 +4,7 @@
 
   <li>
     <strong>User:</strong>
-    <%= @video.user_id %>
+    <%= video_owner_username(@video.user_id) %>
   </li>
 
   <li>
@@ -21,7 +21,10 @@
     <strong>Description:</strong>
     <%= @video.description %>
   </li>
-
+  <li>
+    <strong>Category:</strong>
+    <%= @video.category.name %>
+  </li>
 </ul>
 
 <%= link "Edit", to: video_path(@conn, :edit, @video) %>
