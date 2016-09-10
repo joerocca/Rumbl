@@ -13,6 +13,8 @@
 
   <body>
     <div class="container">
+      <script>window.userToken = "<%= assigns[:user_token] %>"</script>
+      <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
       <div class="header">
         <ol class="breadcrumb text-right">
         <%= if @current_user do %>
